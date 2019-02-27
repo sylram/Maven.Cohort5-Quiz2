@@ -2,14 +2,14 @@ package com.zipcodewilmington.assessment2.part1;
 
 public class BasicUtilities {
     public Boolean isGreaterThan5(Integer value) {
-        if (value > 5) {
+        if (value >= 5) {
             return true;
         }
         return false;
     }
 
     public Boolean isLessThan7(Integer value) {
-        if (value < 7) {
+        if (value <= 7) {
             return true;
         }
         return false;
@@ -24,7 +24,10 @@ public class BasicUtilities {
 
 
     public Boolean startsWith(String string, Character character) {
-        if(string.startsWith(character.toString())){
+        String stringtoLowerCase =string.toLowerCase();
+        String charToLowerCase = character.toString().toLowerCase();
+        if(stringtoLowerCase.startsWith(charToLowerCase)){
+
         return true;
     }
     return false;
