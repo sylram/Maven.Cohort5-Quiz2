@@ -4,6 +4,7 @@ import com.j256.ormlite.stmt.query.In;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ArrayUtility {
     public Integer[] merge(Integer[] array1, Integer[] array2) {
@@ -30,7 +31,7 @@ public class ArrayUtility {
             restOfArray[j]=restOfArray[j];
         }
 
-        return merge(rotated,restOfArray);
+        return merge(restOfArray,rotated);
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
@@ -51,6 +52,17 @@ public class ArrayUtility {
 
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+        HashMap<Integer, Integer> nums = new HashMap<>();
+        for (int j = 0; j < array.length; j++) {
+            if (nums.containsKey(array[j])) {
+                nums.put(array[j], nums.get(array[j] + 1));
+            } else {
+                nums.put(j, 1);
+            }
+            nums.values().toArray();
+            Integer[] num = new Integer[nums.values().toArray().length];
+
+
+        }return null;
     }
 }

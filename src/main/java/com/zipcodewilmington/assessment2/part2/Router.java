@@ -4,22 +4,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Router {
+    HashMap<String,String> router;
     public void add(String path, String controller) {
-//        Map<String,String> router = new Map(path,controller);
-//        router.put(path,controller);
+        router = new HashMap<>();
+        router.put(path,controller);
     }
 
     public Integer size() {
-        return null;
+        return router.size();
     }
 
     public String getController(String path) {
-        return null;
+        return router.get(path);
     }
 
     public void update(String path, String studentController) {
+
+        router.put(path,studentController);
     }
 
     public void remove(String path) {
+        router.remove(path);
     }
 }

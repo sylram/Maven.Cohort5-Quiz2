@@ -25,11 +25,12 @@ public class ListUtility {
     public String join() {
         StringBuilder stringJoined = new StringBuilder();
         stringJoined.append(list.toString());
-        String joined = new String(stringJoined);
+        String joined = new String(stringJoined.toString());
         return joined;
     }
 
     public Integer mostCommon() {
+
 
         return null;
     }

@@ -1,4 +1,4 @@
 package com.zipcodewilmington.assessment2.part3;
 
-public class RedRobin {
+public class RedRobin extends Bird {
 }
